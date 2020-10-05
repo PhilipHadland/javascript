@@ -1,0 +1,30 @@
+<html>
+
+<script>
+	function add(){
+		var first=window.document.Form1.no1.value;
+		var second=window.document.Form1.no2.value;
+		if (first==""){
+			alert("First number is missing");
+		}
+		else {
+			if(second==""){
+				alert("Second number is missing");
+			}
+			else{
+				var res=parseInt(first)+parseInt(second);
+				window.document.Form1.result.value=res;
+			}
+		}
+	}
+</script>
+
+<form name="Form1">
+	First number:<input type="text" name="no1"><br>
+	Second number:<input type="text" name="no2"><br>
+	Result:<input type="text" name="result"><br>
+	<input type="button" value="Click" name="btn3" onclick="add()"> <br><br>
+	
+</form>
+
+</html>
