@@ -1,0 +1,36 @@
+<html>
+<script>
+	function what(){
+	alert("Mouse Leaving");
+	}
+
+	function what2(){
+	alert("Mouse Entering");
+	}
+
+	function setvalue(){
+	window.document.Form1.msg.value=0;
+	}
+
+	function increment(){
+	var A = parseInt(window.document.Form1.msg.value);
+	A++;
+	window.document.Form1.msg.value=A;
+	}
+
+	function decrement(){
+	var A = parseInt(window.document.Form1.msg.value);
+	A--;
+	window.document.Form1.msg.value=A;
+	}
+
+</script>
+
+<form name="Form1">
+	<input type="text" name="msg" value="0"> <br>
+	<input type="button" name="btn-1" value="Increment" onmousemove="increment()" onmouseleave="what()" onmouseenter="what2()">
+	<input type="button" name="btn-2" value="Decrement" onmousemove="decrement()" onclick="setvalue()">
+
+</form>
+
+</html>
