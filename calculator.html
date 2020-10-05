@@ -1,0 +1,88 @@
+<html>
+
+<script>
+	function add(){
+		var first=window.document.Form1.no1.value;
+		var second=window.document.Form1.no2.value;
+		if (first==""){
+			alert("First number is missing");
+			window.document.Form1.no1.focus()
+		}
+		else {
+			if(second==""){
+				alert("Second number is missing");
+				window.document.Form1.no2.focus()
+			}
+			else{
+				var res=parseInt(first)+parseInt(second);
+				window.document.Form1.result.value=res;
+			}
+		}
+		}
+
+	function minus(){
+		var first=window.document.Form1.no1.value;
+		var second=window.document.Form1.no2.value;
+		if (first==""){
+			alert("First number is missing");
+		}
+		else {
+			if(second==""){
+				alert("Second number is missing");
+			}
+			else{
+				var res=parseInt(first)-parseInt(second);
+				window.document.Form1.result.value=res;
+			}
+		}
+		}
+
+	function divide(){
+		var first=window.document.Form1.no1.value;
+		var second=window.document.Form1.no2.value;
+		if (first==""){
+			alert("First number is missing");
+		}
+		else {
+			if(second==""){
+				alert("Second number is missing");
+			}
+			else{
+				var res=parseInt(first)/parseInt(second);
+				window.document.Form1.result.value=res;
+			}
+		}
+		}
+
+	function multiply(){
+		var first=window.document.Form1.no1.value;
+		var second=window.document.Form1.no2.value;
+		if (first==""){
+			alert("First number is missing");
+		}
+		else {
+			if(second==""){
+				alert("Second number is missing");
+			}
+			else{
+				var res=parseInt(first)*parseInt(second);
+				window.document.Form1.result.value=res;
+			}
+		}
+		}
+
+
+</script>
+
+<form name="Form1">
+	First number:<input type="text" name="no1"><br>
+	Second number:<input type="text" name="no2"><br>
+	Result:<input type="text" name="result"><br>
+	<input type="button" value="+" name="btn3" onclick="add()"> 
+	<input type="button" value="-" name="btn4" onclick="minus()"> 
+	<input type="button" value="*" name="btn5" onclick="multiply()"> 
+	<input type="button" value="/" name="btn6" onclick="divide()"> 
+	
+</form>
+
+</html>
