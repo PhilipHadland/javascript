@@ -1,0 +1,15 @@
+<html>
+<script>
+	function dosomething(){
+	var A=window.document.getElementById("no1");
+	var B=window.document.getElementById("no2");
+	var C=window.document.getElementById("no3");
+	C.value=parseInt(A.value) + parseInt(B.value);
+	C.focus();
+	}
+</script>
+	<input type="text" id="no1"> <br>
+	<input type="text" id="no2"> <br>
+	<input type="text" id="no3"> <br>
+	<input type="button" value="Click" onclick="dosomething()">
+</html>
