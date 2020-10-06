@@ -1,0 +1,44 @@
+<html>
+<script>
+	var fz=10;
+	function changethedata(){
+ 		var data=window.document.getElementById("T").value;
+		if (data!=""){
+			window.document.getElementById("span1").innerHTML=data;
+		}
+	}
+	function mousemoving(){
+		if (window.event.ctrlKey){
+			fz++
+			}
+
+		if (window.event.altKey){
+			fz--
+			}
+		var refSpan=window.document.getElementById("span1");
+		refSpan.style.fontSize=fz;
+		refSpan.style.top=window.event.clientY;
+		refSpan.style.left=window.event.clientX;
+	}
+
+	function changecolourred(){
+		var refSpan=window.document.getElementById("span1");
+		refSpan.style.color="red";
+	}
+
+	function changecolourgreen(){
+		var refSpan=window.document.getElementById("span1");
+		refSpan.style.color="green";
+	}
+
+	
+
+
+</script>
+<body onmousemove="mousemoving()">
+<input type="text" id="T" onmouseenter="changethedata()">
+<input type="button" value="RED" onclick="changecolourred()">
+<input type="button" value="GREEN" onclick="changecolourgreen()">
+<span id="span1" style="position:absolute">Nationwide</span>
+</body>
+</html>
