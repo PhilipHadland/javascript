@@ -1,0 +1,33 @@
+<html>
+<script>
+var A=0;
+
+function message(){
+	alert("Hello");
+	}
+function dosomething(){
+	A++;
+	var mainDiv=document.createElement("div");
+	var firstDiv=document.createElement("div");
+	var secondDiv=document.createElement("div");
+	var btnRef=document.createElement("input");
+
+	firstDiv.innerHTML="Record numnber: " + A;
+	secondDiv.innerHTML="Name: " + window.document.getElementById("name").value;
+	btnRef.type="button";
+	btnRef.value="click";
+	btnRef.onclick=message;
+
+	mainDiv.appendChild(firstDiv);
+	mainDiv.appendChild(secondDiv);
+	mainDiv.appendChild(btnRef);
+
+	document.body.appendChild(mainDiv);
+
+	}
+
+</script>
+<input type="text" id="name">
+<input type="Button" value="Click me" onclick="dosomething()">
+
+</html>
