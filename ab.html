@@ -1,0 +1,12 @@
+<html>
+<script>
+	function mousemoving(){
+	var refspan=window.document.getElementById("span1");
+	refspan.style.top=window.event.clientY;
+	refspan.style.left=window.event.clientX;
+	}
+</script>
+<body onmousemove="mousemoving()">
+<span id="span1" style="position:absolute">Nationwide</span>
+</body>
+</html>
